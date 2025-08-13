@@ -1,0 +1,26 @@
+
+<html>
+<head>
+    <title>JavaScript | Take input values</title>
+</head>
+<body>
+    <input type="text" id="mytext" placeholder="Enter Any Text" style="margin: 50px; width: 50%; padding: 20px; border-radius: 20px; outline: none; border: 1px solid black;">
+    <button onclick="loadText()" style="padding: 20px 50px; border-radius: 20px; border: none; background-color: black; color: white;">Load</button>
+    <br>
+    <hr>
+    <br>
+    <h1 style="margin-left: 50px; text-transform: uppercase; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Output </h1>
+    <p id="target" style="font-size: 18px; margin-left: 50px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    </p>
+
+    <script>
+        
+        function loadText(){
+            let val = document.getElementById('mytext').value;
+            document.getElementById('target').innerText = val;
+            document.getElementById('mytext').value = ' ';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<html>
+
+<head>
+    <title>Background Properties</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+   
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-left: 80px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .container1 {
+            width: 90%;
+            height: 500px;
+            background-color: #564aff;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container2 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container3 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            background-size: contain;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container4 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            background-size: cover;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container5 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container6 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            background-size: contain;
+            background-repeat: repeat-x;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container7 {
+            width: 90%;
+            height: 900px;
+            background-image: url('image.jpg');
+            background-size: contain;
+            background-repeat: repeat-y;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container8 {
+            width: 90%;
+            height: 500px;
+            background-image: url('image.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container9 {
+            width: 90%;
+            height: 500px;
+            padding: 10px;
+            background-image: url('image.jpg');
+            border: 7px dashed lightgrey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container10 {
+            width: 90%;
+            height: 500px;
+            padding: 10px;
+            background-image: url('image.jpg');
+            border: 7px dashed grey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container11 {
+            width: 90%;
+            height: 500px;
+            padding: 10px;
+            background-image: url('image.jpg');
+            border: 7px dashed grey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container12 {
+            width: 90%;
+            height: 500px;
+            padding: 20px;
+            background-color: cadetblue;
+            border: 7px dotted black;
+            background-clip: border-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container13 {
+            width: 90%;
+            height: 500px;
+            padding: 20px;
+            background-color: cadetblue;
+            border: 7px dotted black;
+            background-clip: padding-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container14 {
+            width: 90%;
+            height: 500px;
+            padding: 20px;
+            background-color: cadetblue;
+            border: 7px dotted black;
+            background-clip: content-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container15 {
+            width: 90%;
+            height: 500px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            background-image: url('image.jpg');
+            background-size: cover;
+            /* background-repeat: no-repeat; */
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Background Properties</h1>
+    <hr />
+    <h2> background-color</h2>
+    <div class="container1">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-image</h2>
+    <div class="container2">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-size ( contain ) </h2>
+    <div class="container3">
+
+    </div>
+    <h2>background-size ( cover ) </h2>
+    <div class="container4">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-repeat ( no-repeat )</h2>
+    <div class="container5">
+
+    </div>
+    <h2>background-repeat ( repeat-x )</h2>
+    <div class="container6">
+
+    </div>
+    <h2>background-repeat ( repeat-y )</h2>
+    <div class="container7">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-position</h2>
+    <div class="container8">
+
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <hr>
+
+    <h2>background-origin ( border-box ) </h2>
+    <div class="container9">
+
+    </div>
+    <h2>background-origin ( padding-box )</h2>
+    <div class="container10">
+
+    </div>
+    <h2>background-origin ( content-box )</h2>
+    <div class="container11">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-clip ( border-box )</h2>
+    <div class="container12">
+
+    </div>
+    <h2>background-clip ( padding-box )</h2>
+    <div class="container13">
+
+    </div>
+    <h2>background-clip ( content-box ) </h2>
+    <div class="container14">
+
+    </div>
+    <br>
+    <hr>
+    <h2>background-attachment</h2>
+    <div class="container15">
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+
+</body>
+
+</html>

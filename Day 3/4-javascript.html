@@ -1,0 +1,27 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | hide content</title>
+</head>
+<body>
+
+    <p id="target">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore veritatis delectus perferendis alias, repellendus nostrum, officia enim adipisci illum error, dignissimos laborum voluptatum similique maxime ad assumenda iste odio aliquid velit! Voluptate beatae ducimus laborum! Sed dolorem numquam libero dignissimos nobis, esse assumenda laboriosam deleniti velit pariatur rerum nihil quam?
+    </p>
+    <br>
+    <br>
+    <button id="btn" onclick="hideContent()">Hide Content</button>
+    <button id="btn" onclick="showContent()">Show Content</button>
+
+    <script>
+        function hideContent(){
+            document.getElementById('target').style.display = 'none';
+        }
+        function showContent(){
+            document.getElementById('target').style.display = 'contents';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(236, 236, 236);
+}
+
+
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+header nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0e2f46;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+header nav ul li a:hover{
+    font-size: 20px;
+    font-weight: 800;
+    color: #0e2f46;
+    border-bottom: 2px solid #0e2f46;
+}
+
+header nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav .logo .name{
+    display: block;
+}
+
+header nav .logo .name .big{
+    font-size: 40px;
+}
+header nav .logo .name .small{
+    font-size: 15px;
+}
+
+.heading-main{
+    font-size: 24px;
+    margin-left: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    border-radius: 20px;
+}   

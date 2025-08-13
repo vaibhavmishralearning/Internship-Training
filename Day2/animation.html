@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color:cornflowerblue;
+            margin-top: 100px;
+            margin-left: 100px;
+            animation: myanimation 2s ease-in-out infinite;
+        }
+
+        @keyframes myanimation {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.5;
+                width: 500px;
+                background-color: cadetblue;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+    
+</body>
+</html>
