@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd</title>
+</head>
+<body>
+    
+    <h1>Check Odd Even </h1>
+
+    <p id="output"></p>
+
+    <button onclick="check()">Check</button>
+
+    <script>
+            function check() {
+                let num = parseInt(prompt("Enter Any Number : "));
+                let ans = " ";
+                if (!isNAN(num)) {
+                    if (number % 2 ==0){
+                    ans =  ans + "Number is Even";
+                    } else{
+                        ans = ans + "Number is Odd";
+                    }
+                }
+                else{
+                    ans = "Number is Odd";
+                }
+                document.getElementById('output').innerText = "hi";
+            }
+    </script>
+</body>
+</html>

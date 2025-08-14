@@ -1,0 +1,166 @@
+<html lang="en">
+
+<head>
+    <title>Grading Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 500px;
+            height: 400px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        form input {
+            width: 90%;
+            padding: 15px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        form label{
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form .btn-grp{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        form .btn-grp button{
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+         form .btn-grp button:hover{
+            background-color: black;
+            color: white;
+         }
+        #output{
+            width: 80%;
+            height: 100px;
+            background-color: rgb(249, 249, 249);
+            border: 1px solid lightgrey;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sub-heading{
+            font-size: 16px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 5px;
+            color: grey;
+        }
+
+        hr{
+            width: 100%;
+             border: 1px solid rgb(236, 236, 236);
+             color: rgb(215, 255, 254);
+             color: rgb(255, 230, 184);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="form">
+            <label for="number">Enter Your Grade</label>
+            <br>
+            <input type="number" id="number" min="0" max="100" required>
+            <br>
+            <div class="btn-grp">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+            </div>
+            <br>
+        </form>
+        <br>
+        <hr/>
+        <br>
+        <h1 class="sub-heading">Grade</h1>
+        <br>
+        <div id="output">
+        
+        </div>
+    </div>
+
+    <script>
+        let form = document.getElementById('form');
+        let output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            // 40 50 60 75 95 100
+
+            let marks = parseInt(document.getElementById('number').value);
+
+            if (marks >= 0 && marks <= 100) {
+                if (marks >= 0 && marks <= 40) {
+                    output.innerText = "E";
+                    output.style.backgroundColor = ' rgb(255, 215, 215)';
+                }
+                else if (marks >= 41 && marks <= 50) {
+                    output.innerText = "D";
+                    output.style.backgroundColor = 'rgb(255, 230, 184)';
+                }
+                else if (marks >= 51 && marks <= 60) {
+                    output.innerText = "C";
+                    output.style.backgroundColor = 'rgb(255, 255, 181)';
+                }
+                else if (marks >= 61 && marks <= 75) {
+                    output.innerText = "B";
+                    output.style.backgroundColor = 'rgb(178, 231, 255)';
+                }
+                else if (marks >= 76 && marks <= 95) {
+                    output.innerText = "A";
+                    output.style.backgroundColor = 'rgb(178, 178, 255)';
+                }
+                else if (marks >= 96 && marks <= 100) {
+                    output.innerText = "A++";
+                    output.style.backgroundColor = 'rgb(213, 255, 213)';
+                }
+            }
+            else {
+                output.innerText = "Invalid Input";
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

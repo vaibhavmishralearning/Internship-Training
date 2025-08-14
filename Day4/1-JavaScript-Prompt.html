@@ -1,0 +1,55 @@
+
+<html>
+<head>
+    <title>Prompt</title>
+    <style>
+        button{
+            background-color: white;
+            border: 1px solid lightgrey;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1>JavaScript Prompt</h1>
+        <p id="output"></p>
+        <br>
+        <button onclick="get_prompt('add')">Add Number</button>
+        <button onclick="get_prompt('subtract')">Subtract Number</button>
+        <button onclick="get_prompt('multiply')">Multiply Number</button>
+        <button onclick="get_prompt('divide')">Divide Number</button>
+
+        <script>
+            function get_prompt(param) {
+
+                let FirstNubmer = parseFloat(prompt("Enter First Number : "));
+                let SecondNumber = parseFloat(prompt("Enter Second Number : "));
+                switch (param) {
+                    case 'add':
+                        document.getElementById('output').innerText = `Add : ${FirstNubmer + SecondNumber}`;
+                        break;
+                    case 'subtract':
+                        document.getElementById('output').innerText = `Subtract : ${FirstNubmer - SecondNumber}`;
+                        break;
+                    case 'multiply':
+                        document.getElementById('output').innerText = `Multiply : ${FirstNubmer * SecondNumber}`;
+                        break;
+                    case 'divide':
+                        document.getElementById('output').innerText = `Divide : ${FirstNubmer / SecondNumber}`;
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        </script>
+</body>
+</html>

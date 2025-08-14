@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <title>Area Calculation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            min-height: 70%;
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+        }
+
+        .commands {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            width: 100%;
+            height: 15%;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .commands .btn {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .commands .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+
+        #output {
+            width: 80%;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(250, 250, 250);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px solid rgb(225, 225, 225);
+        }
+
+
+        .heading {
+            margin-left: 120px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(84, 84, 84);
+        }
+
+
+        .back {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+
+        }
+
+        .back a {
+            transform: rotateY(180deg);
+            text-decoration: none;
+            color: inherit;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back">
+        <a href="index.html">&#x279C;</a>
+    </div>
+
+    <div class="container">
+        <div class="commands">
+            <button type="button" onclick="surface_area_of_cylinder()" class="btn">Surface Area Of Cylinder</button>
+            <button type="button" onclick="surface_area_of_cube()" class="btn">Surface Area Of Cube</button>
+            <button type="button" onclick="surface_area_of_cuboid()" class="btn">Surface Area Of Cuboid</button>
+            <button type="button" id="clear" onclick='clear_output()' class="btn">Clear</button>
+        </div>
+        <br>
+        <br>
+        <h1 class="heading">Output </h1>
+        <br>
+        <br>
+        <div id="output">
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+        function surface_area_of_cylinder() {
+            const pi = 3.14;
+            let r = Number(prompt("Enter Radius Of Cylinder : ")) || 0;
+            let h = Number(prompt("Enter Height a Of Cylinder : ")) || 0;
+            let ans = ` Surface Area Of Cube :  ${(2 * pi * r * h) + (2 * pi * r * r)}`;
+            document.getElementById("output").innerHTML = ans;
+        }
+
+        function surface_area_of_cube() {
+            let side = Number(prompt("Enter Edge Of Cube : ")) || 0;
+            let ans = `Surface Area Of Cube :  ${6 * side * side}`;
+            document.getElementById("output").innerHTML = ans;
+        }
+
+        function surface_area_of_cuboid() {
+            const pi = 3.14;
+            let l = Number(prompt("Enter Length Of Cuboid : ")) || 0;
+            let w = Number(prompt("Enter Width Of Cuboid : ")) || 0;
+            let h = Number(prompt("Enter Height Of Cuboid : ")) || 0;
+            let ans = `Surface Area Of Cuboid :  ${2 * (l * w + w * h + l * h)}`;
+            document.getElementById("output").innerHTML = ans;
+
+        }
+
+
+
+
+        function clear_output() {
+            document.getElementById("output").innerHTML = " ";
+        }
+
+
+
+    </script>
+</body>
+
+</html>
